@@ -167,7 +167,7 @@ const LovieMessages = () => {
                   className="fade-image"
                   style={{
                     opacity,
-                    transition: "opacity 3000ms ease-out",
+                    transition: "opacity 5000ms ease-out",
                   }}
                 />
                 <p
