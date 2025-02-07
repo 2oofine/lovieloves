@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/no-unsafe-function-type */
 "use client";
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
@@ -77,7 +79,7 @@ export const ModalBody = ({
     }
   }, [open]);
 
-  const modalRef = useRef(null);
+  const modalRef = useRef<HTMLDivElement>(null!);
   const { setOpen } = useModal();
   useOutsideClick(modalRef, () => setOpen(false));
 
