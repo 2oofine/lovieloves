@@ -46,7 +46,7 @@ const LovieMemories = () => {
         And from that moment, everything changed— our love grew stronger with
         every challenge.
       </h1>
-      <AnimatedTestimonials testimonials={memories} />;
+      <AnimatedTestimonials testimonials={memories} />
     </div>
   );
 };

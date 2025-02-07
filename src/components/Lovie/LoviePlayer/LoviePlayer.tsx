@@ -23,7 +23,7 @@ const LoviePlayer = () => {
   ];
 
   const [currentSongIndex, setCurrentSongIndex] = useState(0);
-  const [isPlaying, setIsPlaying] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(true);
   const audioRef = useRef<HTMLAudioElement>(null);
 
   const playPauseHandler = () => {
