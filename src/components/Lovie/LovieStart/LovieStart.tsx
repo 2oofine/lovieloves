@@ -1,7 +1,7 @@
 import { ContainerScroll } from "@/components/ui/container-scroll-animation";
 import React from "react";
 import Image from "next/image";
-import First from "../../../../public/assets/memories/brah.jpg";
+import First from "../../../../public/assets/memories/first.jpg";
 
 const LovieStart = () => {
   return (
@@ -24,7 +24,7 @@ const LovieStart = () => {
           alt="First interaction with lovie"
           height={720}
           width={1400}
-          className="mx-auto rounded-2xl h-full md:h-[80vh] lg:h-[110vh] object-contain "
+          className="mx-auto object-cover rounded-2xl h-full md:h-[80vh] lg:h-[110vh] object-left-bottom "
           draggable={false}
         />
       </ContainerScroll>
