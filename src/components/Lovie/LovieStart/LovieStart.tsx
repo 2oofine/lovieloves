@@ -1,7 +1,7 @@
 import { ContainerScroll } from "@/components/ui/container-scroll-animation";
 import React from "react";
 import Image from "next/image";
-import First from "../../../../public/assets/memories/z.jpg";
+import First from "../../../../public/assets/memories/first.jpg";
 
 const LovieStart = () => {
   return (
