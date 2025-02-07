@@ -73,7 +73,9 @@ const LovieMessages = () => {
         <ModalBody>
           <ModalContent className="max-h-[80vh] overflow-y-auto overflow-x-hidden p-4">
             <h4 className="text-lg md:text-2xl text-neutral-600 dark:text-neutral-100 font-bold text-center mb-8">
-              It’s Been One Year Since We First Talked 😚
+              It’s Been One Year
+              <br />
+              Since We First Talked 😚
             </h4>
             <div className="flex justify-center items-center">
               {images.map((image, idx) => (
@@ -133,10 +135,10 @@ const LovieMessages = () => {
               </div>
             </div>
           </ModalContent>
-          <ModalFooter className="gap-4">
+          <ModalFooter className="flex justify-between items-center w-full">
             <button
               onClick={handleClick}
-              className="bg-red-400 text-white dark:bg-white dark:text-black text-sm px-3 py-3 w-auto rounded-xl border"
+              className="bg-red-400 text-white flex dark:bg-white dark:text-black text-sm px-3 py-3 w-auto rounded-xl border"
             >
               Click to claim 😁
             </button>
