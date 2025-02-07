@@ -24,7 +24,7 @@ const LovieStart = () => {
           alt="First interaction with lovie"
           height={720}
           width={1400}
-          className="mx-auto object-cover rounded-2xl h-full md:h-[700] lg:h-[1200] object-left-bottom "
+          className="mx-auto object-cover rounded-2xl h-full md:h-[80vh] lg:h-[110vh] object-left-bottom "
           draggable={false}
         />
       </ContainerScroll>
