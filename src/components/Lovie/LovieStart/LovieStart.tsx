@@ -25,8 +25,8 @@ const LovieStart = () => {
           height={720}
           width={1400}
           className="mx-auto object-cover rounded-2xl h-full
-            object-[left_bottom]
-            md:h-[700] 
+            object-left-bottom
+            md:h-[1200] 
             lg:h-[1200]"
           draggable={false}
         />
