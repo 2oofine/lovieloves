@@ -77,6 +77,7 @@ module.exports = {
       },
     },
   },
+  safelist: ["md:h-[700]", "lg:h-[1200]"],
   plugins: [addVariablesForColors, require("tailwindcss-animate")],
 };
 
