@@ -71,7 +71,7 @@ const LovieMessages = () => {
           </div>
         </ModalTrigger>
         <ModalBody>
-          <ModalContent>
+          <ModalContent className="max-h-[80vh] overflow-y-auto overflow-x-hidden p-4">
             <h4 className="text-lg md:text-2xl text-neutral-600 dark:text-neutral-100 font-bold text-center mb-8">
               It’s Been One Year Since We First Talked 😚
             </h4>
