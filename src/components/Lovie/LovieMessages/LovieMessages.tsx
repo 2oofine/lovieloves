@@ -73,9 +73,7 @@ const LovieMessages = () => {
         <ModalBody>
           <ModalContent className="max-h-[80vh] overflow-y-auto overflow-x-hidden p-4">
             <h4 className="text-lg md:text-2xl text-neutral-600 dark:text-neutral-100 font-bold text-center mb-8">
-              It’s Been One Year
-              <br />
-              Since We First Talked 😚
+              Happy Valentines Day, Lovie!
             </h4>
             <div className="flex justify-center items-center">
               {images.map((image, idx) => (
@@ -113,7 +111,8 @@ const LovieMessages = () => {
             <div className="py-2 flex flex-wrap gap-x-4 gap-y-6 items-start justify-start max-w-sm mx-auto">
               <div className="flex  justify-center">
                 <span className="w-full text-neutral-700 dark:text-neutral-300 text-sm ">
-                  Meron man tayong mga &apos;di pag kakaintindihan madalas, mga
+                  It&apos;s been one year since we started talking and ayon,
+                  meron man tayong mga &apos;di pag kakaintindihan madalas, mga
                   tampuhan at maliit na away—lagi mong tatandaan, lovie, na
                   pipiliin ko pa rin at palaging mamahalin ka sa mga panahong
                   dumadaan tayo sa challenges sa relationship natin. I&apos;m
