@@ -73,7 +73,7 @@ const LovieMessages = () => {
         <ModalBody>
           <ModalContent className="max-h-[80vh] overflow-y-auto overflow-x-hidden p-4">
             <h4 className="text-lg md:text-2xl text-neutral-600 dark:text-neutral-100 font-bold text-center mb-8">
-              Happy Valentines Day, Lovie!
+              Happy Valentines Day, Lovie ❤️!
             </h4>
             <div className="flex justify-center items-center">
               {images.map((image, idx) => (
