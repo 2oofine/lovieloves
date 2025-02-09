@@ -1,5 +1,7 @@
 "use client";
-import React, { useEffect, useRef, useState } from "react";
+import { motion } from "framer-motion";
+import Image from "next/image";
+import { useRef, useState } from "react";
 import {
   Modal,
   ModalBody,
@@ -7,8 +9,6 @@ import {
   ModalFooter,
   ModalTrigger,
 } from "../../ui/animated-modal";
-import Image from "next/image";
-import { motion } from "framer-motion";
 
 const LovieMessages = () => {
   const images = [
@@ -20,37 +20,50 @@ const LovieMessages = () => {
   ];
 
   const [isVisible, setIsVisible] = useState(false);
-  const [opacity, setOpacity] = useState(1);
-  const audioRef = useRef<HTMLAudioElement>(null);
+  // const [opacity, setOpacity] = useState(1);
+  // const audioRef = useRef<HTMLAudioElement>(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
 
   const handleClick = () => {
-    if (audioRef.current) {
-      audioRef.current.play();
-    }
+    // if (audioRef.current) {
+    //   audioRef.current.play();
+    // }
 
     setIsVisible(true);
-    setOpacity(1); // Reset opacity to full visibility when shown
   };
 
-  useEffect(() => {
-    if (isVisible) {
-      const fadeInterval = setInterval(() => {
-        setOpacity((prevOpacity) => {
-          const newOpacity = prevOpacity - 0.05; // Decrease opacity by 0.05 each interval
-          if (newOpacity <= 0) {
-            clearInterval(fadeInterval); // Stop fading when opacity reaches 0
-            return 0;
-          }
-          return newOpacity;
-        });
-      }, 100); // Decrease opacity every 100ms (adjust for speed)
+  const handleVideoEnd = () => {
+    setIsVisible(false); // Close popup when video ends
+  };
 
-      // Hide image completely after the fade is done
-      setTimeout(() => {
-        setIsVisible(false);
-      }, 5000); // Ensure image disappears after full fade
-    }
-  }, [isVisible]);
+  // const handleClick = () => {
+  //   if (audioRef.current) {
+  //     audioRef.current.play();
+  //   }
+
+  //   setIsVisible(true);
+  //   setOpacity(1); // Reset opacity to full visibility when shown
+  // };
+
+  // useEffect(() => {
+  //   if (isVisible) {
+  //     const fadeInterval = setInterval(() => {
+  //       setOpacity((prevOpacity) => {
+  //         const newOpacity = prevOpacity - 0.05; // Decrease opacity by 0.05 each interval
+  //         if (newOpacity <= 0) {
+  //           clearInterval(fadeInterval); // Stop fading when opacity reaches 0
+  //           return 0;
+  //         }
+  //         return newOpacity;
+  //       });
+  //     }, 100); // Decrease opacity every 100ms (adjust for speed)
+
+  //     // Hide image completely after the fade is done
+  //     setTimeout(() => {
+  //       setIsVisible(false);
+  //     }, 5000); // Ensure image disappears after full fade
+  //   }
+  // }, [isVisible]);
 
   return (
     <div className="py-7 flex flex-col items-center justify-center z-[1000]">
@@ -139,11 +152,45 @@ const LovieMessages = () => {
               onClick={handleClick}
               className="bg-red-400 text-white flex dark:bg-white dark:text-black text-sm px-3 py-3 w-auto rounded-xl border"
             >
-              Click to claim 😁
+              Harvest the 🌻
             </button>
-            <audio ref={audioRef} src="/assets/goofy-ahh-sounds/vineboom.mp3" />
-
+            {/* <audio ref={audioRef} src="/assets/goofy-ahh-sounds/vineboom.mp3" /> */}
             {isVisible && (
+              <div
+                className="video-popup"
+                style={{
+                  position: "fixed",
+                  top: "50%",
+                  left: "50%",
+                  transform: "translate(-50%, -50%)",
+                  zIndex: 10,
+                  backgroundColor: "rgba(0, 0, 0, 0.8)", // Optional: dark background
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  padding: "10px",
+                  borderRadius: "10px",
+                }}
+              >
+                <button
+                  onClick={handleVideoEnd}
+                  className="absolute top-2 right-2 z-[99] bg-transparent text-white px-3 py-1 rounded-full text-sm"
+                >
+                  ✖ Close
+                </button>
+                <video
+                  ref={videoRef}
+                  width={500}
+                  height={500}
+                  controls
+                  autoPlay
+                  onEnded={handleVideoEnd} // Close popup when video ends
+                  src="/assets/videos/harana.mp4" // Replace with your video path
+                />
+              </div>
+            )}
+            {/* {isVisible && (
               <div
                 className="image-container"
                 style={{
@@ -177,7 +224,7 @@ const LovieMessages = () => {
                   you&apos;re ready to have some love!
                 </p>
               </div>
-            )}
+            )} */}
             <p className="text-neutral-700 text-sm">
               From your lovie, <br /> Sherwin
             </p>
