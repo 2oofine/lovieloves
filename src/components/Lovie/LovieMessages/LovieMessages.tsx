@@ -119,7 +119,7 @@ const LovieMessages = () => {
             </div>
 
             <span className="py-2 text-neutral-700 dark:text-neutral-300 text-sm text-center">
-              My reactions kapag kausap ka 😝
+              My reactions kapag kausap/kasama ka 😝
             </span>
             <div className="py-2 flex flex-wrap gap-x-4 gap-y-6 items-start justify-start max-w-sm mx-auto">
               <div className="flex  justify-center">
@@ -140,8 +140,12 @@ const LovieMessages = () => {
                   Ikaw &apos;yung dahilan bakit parin ako nagpapatuloy sa buhay.
                   Thank you lovie for making me realize a lot of things. Salamat
                   sa pag mamahal, sa pag-unawa at sa walang sawang pagtanggap
-                  saakin sa buhay mo lovie kahit na minsan naiinis kana saakin
-                  at sumasakit na ulo mo saakin XD. Always know na hinding-hindi
+                  saakin sa buhay mo lovie. Lagi mong tatandaan na nandito lang
+                  ako palagi, gusto ko rin na sana kapag mahina ka, nahihirapan
+                  ka or may problema kang pinagdaraanan, &apos;wag kang mag
+                  hesitate na lumapit saakin, makikinig ako at sasamahan kita
+                  kahit ano pa &apos;yan, kahit na minsan naiinis kana saakin at
+                  sumasakit na ulo mo saakin XD, always know na hinding-hindi
                   ako mawawala sa piling mo, oteyy?
                 </span>
               </div>
